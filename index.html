@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aldeia Vape: seleção de POD, vape, vaporizadores e acessórios.">
+  <title>Aldeia Vape / POD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <nav aria-label="Links institucionais">
+        <a href="#">Home</a>
+        <a href="#blog">Nosso blog</a>
+        <a href="#">Lista de Brindes</a>
+        <a href="#footer">Políticas de vendas</a>
+        <a href="#footer">Garantia &amp; Troca</a>
+        <a href="#footer">Fale conosco</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <a class="brand" href="#" aria-label="Aldeia Vape - início"><img src="assets/logo.png" alt="Aldeia Vape"></a>
+      <form class="search" id="search-form" role="search">
+        <input id="search-input" type="search" placeholder="O que você está procurando?" aria-label="Pesquisar produtos">
+        <button type="submit" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        </button>
+      </form>
+      <div class="header-actions">
+        <button type="button" aria-label="Minha conta" class="icon-button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c.7-4.2 3.3-6.4 8-6.4s7.3 2.2 8 6.4"></path></svg>
+          <span>Olá, faça seu login<br><strong>ou cadastre-se</strong></span>
+        </button>
+        <button type="button" aria-label="Favoritos" class="icon-button favorites-button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 1 0-7.8 7.8l1.1 1.1L12 21l7.8-7.4 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"></path></svg>
+        </button>
+        <button type="button" aria-label="Carrinho" class="icon-button cart-button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 11h10.8l2-7H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="category-nav" aria-label="Categorias">
+    <div class="container category-inner">
+      <a href="#vaporizadores">Vaporizador de Ervas</a>
+      <a href="#descartaveis">POD Descartável</a>
+      <a href="#premium">Vape</a>
+      <a href="#premium">POD System</a>
+      <a href="#juices">Juices</a>
+      <a href="#footer">Acessórios</a>
+      <a href="#promocoes">PODs em promoção</a>
+      <a href="#promocoes" class="offer-link">Ofertas</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" aria-label="Destaques">
+      <div class="hero-track">
+        <a href="#vaporizadores" class="hero-slide active"><picture><source media="(max-width: 640px)" srcset="assets/banner-fenix-mobile.jpg"><img src="assets/banner-fenix.jpg" alt="Fenix Pro, vaporizador de ervas à pronta entrega"></picture></a>
+        <a href="#descartaveis" class="hero-slide"><img src="assets/banner-pods.jpg" alt="Lançamentos em pods descartáveis"></a>
+        <a href="#premium" class="hero-slide"><img src="assets/banner-kits.jpg" alt="Lançamentos em vape kits"></a>
+      </div>
+      <button class="hero-arrow hero-prev" type="button" aria-label="Banner anterior">‹</button>
+      <button class="hero-arrow hero-next" type="button" aria-label="Próximo banner">›</button>
+      <div class="hero-dots" aria-label="Escolher banner"></div>
+    </section>
+
+    <div id="catalog"></div>
+
+    <section class="deal-strip container" aria-label="Oferta do mês">
+      <span>Setembro com descontos de até 35% em pods descartáveis!</span>
+      <a href="#promocoes">Acaba em <strong>11D 21h 17m</strong></a>
+    </section>
+
+    <section class="reviews container" aria-labelledby="reviews-title">
+      <h2 id="reviews-title">O QUE ESTÃO FALANDO DA GENTE</h2>
+      <div class="review-grid">
+        <article><div class="stars">★★★★★</div><a href="#">Líquido Surpresa de Frutas - LS JUICES</a><p>Top demais, sabor bom. Recomendo.</p><small>Márcio Rodrigues</small></article>
+        <article><div class="stars">★★★★★</div><a href="#">Vaporizador de Ervas XMax Starry 4.0</a><p>Entregou o produto antes do prazo. Produto de excelente qualidade.</p><small>Marcelo</small></article>
+        <article><div class="stars">★★★★★</div><a href="#">Pod System Luxe PM40 1800mAh</a><p>Muito prático, bonito e gostoso de usar. Um ótimo controle para carregar no bolso.</p><small>Vitor Politano</small></article>
+        <article><div class="stars">★★★★★</div><a href="#">Juice Nic Salt Caravela Frutas Vermelhas</a><p>Paladar muito doce, ótimo na inspiração. Recomendo.</p><small>João Carlos</small></article>
+      </div>
+      <a class="see-all" href="#">Ver todas as avaliações</a>
+    </section>
+
+    <section class="blog container" id="blog" aria-labelledby="blog-title">
+      <h2 id="blog-title">NOVIDADES DO BLOG</h2>
+      <div class="blog-grid">
+        <article><a href="#"><img src="assets/blog/vaporizadores.png" alt="Vaporizadores de ervas"><h3>Top 10: Os melhores vaporizadores de ervas de 2024</h3></a></article>
+        <article><a href="#"><img src="assets/blog/gen-max.jpg" alt="Comparativo Gen Max e Gen SE"><h3>Comparativo do vape Gen Max e Gen SE: um review dos novos modelos</h3></a></article>
+        <article><a href="#"><img src="assets/blog/gen-se.jpg" alt="Vape Gen SE Vaporesso"><h3>Vape Gen SE: o dispositivo mais avançado da Vaporesso!</h3></a></article>
+        <article><a href="#"><img src="assets/blog/dual-tank.jpg" alt="Pod Black Sheep Dual Tank"><h3>Pod Descartável Dual Tank Black Sheep 20000 puffs</h3></a></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div><h2>JUNTE-SE A NÓS</h2><p>OBTENHA DESCONTOS EXCLUSIVOS</p></div>
+        <form id="newsletter-form"><input type="text" placeholder="Seu nome" required aria-label="Seu nome"><input type="email" placeholder="Digite seu e-mail" required aria-label="Digite seu e-mail"><button type="submit">INSCREVER-ME</button></form>
+      </div>
+    </section>
+    <section class="footer-main">
+      <div class="container footer-grid">
+        <div><h3>INSTITUCIONAL</h3><a href="#blog">Nosso blog</a><a href="#">Lista de Brindes</a><a href="#">Formas de Pagamento</a><a href="#">Políticas de vendas</a><a href="#">Garantia &amp; Troca</a><a href="#">Fale conosco</a></div>
+        <div><h3>SUA CONTA</h3><a href="#">Minha conta</a><a href="#">Minhas compras</a><a href="#">Meu carrinho</a><a href="#">Meus produtos favoritos</a><h3 class="footer-subtitle">PRECISA DE AJUDA?</h3><a href="#">Termos de uso</a><a href="#">Como utilizar meu vape de ervas?</a><a href="#">Acompanhar meus pedidos</a></div>
+        <div><h3>ATENDIMENTO</h3><p>• Segunda a Quinta-feira: 07h às 17h</p><p>• Sexta-feira: 07h às 16h</p><p>• E-mail: contato@aldeiavape.com</p><p>• Telegram</p><p>Estamos à disposição para ajudar com qualquer dúvida ou solicitação!</p></div>
+        <div><h3>FORMAS DE PAGAMENTO</h3><div class="payment-row"><img src="assets/payments/master.svg" alt="Mastercard"><img src="assets/payments/visa.svg" alt="Visa"><img src="assets/payments/amex.svg" alt="American Express"><img src="assets/payments/elo.svg" alt="Elo"></div><h3>SEGURANÇA</h3><div class="security-badge"><span>★</span><strong>4.8</strong><small>1259 avaliações</small></div></div>
+      </div>
+    </section>
+    <div class="copyright">Aldeia Vape © Todos os direitos reservados. Produtos originais de marcas renomadas como Vaporesso, Uwell, Voopoo, Elf Bar e mais.<br>Compromisso com qualidade e autenticidade.</div>
+  </footer>
+
+  <button class="telegram" type="button" aria-label="Fale pelo Telegram">➤</button>
+  <button class="loyalty" type="button"><span>Programa de Fidelidade</span><b>★</b></button>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
