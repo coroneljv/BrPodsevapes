@@ -124,6 +124,111 @@
 
   <button class="telegram" type="button" aria-label="Fale pelo Telegram">➤</button>
   <button class="loyalty" type="button"><span>Programa de Fidelidade</span><b>★</b></button>
+
+  <div class="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
+    <div class="cart-drawer-header">
+      <div><span class="eyebrow">SEU PEDIDO</span><h2 id="cart-title">Meu carrinho</h2></div>
+      <button class="cart-close" type="button" aria-label="Fechar carrinho">×</button>
+    </div>
+    <div class="free-shipping"><span>Frete grátis acima de R$ 299</span><div><i></i></div><small></small></div>
+    <div class="cart-items"></div>
+    <div class="cart-empty"><span>🛍</span><h3>Seu carrinho está vazio</h3><p>Explore as vitrines e adicione seus produtos favoritos.</p><button type="button" class="continue-shopping">Continuar comprando</button></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal"><span>Subtotal</span><strong>R$ 0,00</strong></div>
+      <p>Frete e descontos calculados no checkout.</p>
+      <button type="button" class="go-checkout">IR PARA O CHECKOUT</button>
+      <button type="button" class="continue-shopping link-button">Continuar comprando</button>
+    </div>
+  </aside>
+
+  <div class="checkout-overlay" hidden>
+    <section class="checkout" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <header class="checkout-header">
+        <a class="checkout-brand" href="#"><img src="assets/logo.png" alt="Aldeia Vape"></a>
+        <div class="secure-checkout"><span>▣</span><div><strong>Checkout seguro</strong><small>Ambiente de demonstração</small></div></div>
+        <button class="checkout-close" type="button" aria-label="Fechar checkout">×</button>
+      </header>
+      <div class="checkout-progress" aria-label="Etapas do checkout">
+        <div class="active" data-progress="1"><b>1</b><span>Entrega</span></div><i></i>
+        <div data-progress="2"><b>2</b><span>Pagamento</span></div><i></i>
+        <div data-progress="3"><b>3</b><span>Revisão</span></div>
+      </div>
+
+      <div class="checkout-body">
+        <form id="checkout-form" novalidate>
+          <section class="checkout-step active" data-step="1">
+            <div class="checkout-card">
+              <span class="eyebrow">IDENTIFICAÇÃO</span><h2 id="checkout-title">Quem vai receber o pedido?</h2>
+              <div class="form-grid">
+                <label class="span-2">Nome completo<input name="name" autocomplete="name" required placeholder="Digite seu nome completo"></label>
+                <label>E-mail<input name="email" type="email" autocomplete="email" required placeholder="voce@email.com"></label>
+                <label>Celular<input name="phone" inputmode="numeric" autocomplete="tel" required minlength="15" placeholder="(00) 00000-0000"></label>
+              </div>
+            </div>
+            <div class="checkout-card">
+              <span class="eyebrow">ENDEREÇO DE ENTREGA</span><h2>Onde devemos entregar?</h2>
+              <div class="form-grid">
+                <label>CEP<input name="cep" inputmode="numeric" autocomplete="postal-code" required minlength="9" placeholder="00000-000"></label>
+                <label class="span-2">Rua / Avenida<input name="street" autocomplete="address-line1" required placeholder="Nome da rua"></label>
+                <label>Número<input name="number" inputmode="numeric" required placeholder="123"></label>
+                <label>Complemento <small>(opcional)</small><input name="complement" autocomplete="address-line2" placeholder="Apto, bloco..."></label>
+                <label>Bairro<input name="district" required placeholder="Seu bairro"></label>
+                <label>Cidade<input name="city" autocomplete="address-level2" required placeholder="Sua cidade"></label>
+                <label>Estado<select name="state" autocomplete="address-level1" required><option value="">UF</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label>
+              </div>
+            </div>
+            <div class="checkout-card">
+              <span class="eyebrow">FORMA DE ENTREGA</span><h2>Escolha como receber</h2>
+              <div class="shipping-options">
+                <label><input type="radio" name="shipping" value="1990" checked><span><strong>Entrega econômica</strong><small>5 a 8 dias úteis</small></span><b>R$ 19,90</b></label>
+                <label><input type="radio" name="shipping" value="3490"><span><strong>Entrega expressa</strong><small>2 a 4 dias úteis</small></span><b>R$ 34,90</b></label>
+                <label><input type="radio" name="shipping" value="0"><span><strong>Retirada no local</strong><small>Disponível após confirmação</small></span><b>Grátis</b></label>
+              </div>
+            </div>
+          </section>
+
+          <section class="checkout-step" data-step="2">
+            <div class="checkout-card">
+              <span class="eyebrow">PAGAMENTO</span><h2>Como você quer pagar?</h2>
+              <div class="payment-tabs">
+                <button type="button" class="active" data-method="card"><span>▣</span> Cartão de crédito</button>
+                <button type="button" data-method="pix"><span>◆</span> PIX</button>
+              </div>
+              <div class="demo-notice"><strong>Simulação:</strong> estes dados não são enviados, cobrados ou armazenados.</div>
+              <div class="payment-panel card-panel active">
+                <div class="card-preview"><span>ALDEIA</span><i>•••• •••• •••• <b class="card-last">0000</b></i><small>SEU NOME</small></div>
+                <div class="form-grid card-fields">
+                  <label class="span-2">Número do cartão<input name="cardNumber" inputmode="numeric" autocomplete="off" required minlength="19" maxlength="19" placeholder="0000 0000 0000 0000"></label>
+                  <label class="span-2">Nome impresso no cartão<input name="cardName" autocomplete="off" required placeholder="NOME COMO ESTÁ NO CARTÃO"></label>
+                  <label>Validade<input name="cardExpiry" inputmode="numeric" autocomplete="off" required minlength="5" maxlength="5" placeholder="MM/AA"></label>
+                  <label>CVV<input name="cardCvv" inputmode="numeric" autocomplete="off" required minlength="3" maxlength="4" placeholder="123"></label>
+                  <label class="span-2">Parcelamento<select name="installments"><option value="1">1x sem juros</option><option value="2">2x sem juros</option><option value="3">3x sem juros</option></select></label>
+                </div>
+              </div>
+              <div class="payment-panel pix-panel">
+                <div class="pix-icon">◆</div><h3>Pagamento por PIX</h3><p>Na simulação, o código PIX seria gerado depois da confirmação do pedido.</p><strong>5% de desconto no PIX</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="checkout-step" data-step="3">
+            <div class="checkout-card"><span class="eyebrow">CONFIRA ANTES DE FINALIZAR</span><h2>Revisão do pedido</h2><div id="checkout-review"></div></div>
+          </section>
+        </form>
+
+        <aside class="order-summary">
+          <h2>Resumo do pedido</h2><div class="summary-items"></div>
+          <div class="summary-values"><p><span>Subtotal</span><b class="summary-subtotal">R$ 0,00</b></p><p><span>Entrega</span><b class="summary-shipping">R$ 19,90</b></p><p class="summary-discount-row" hidden><span>Desconto PIX</span><b class="summary-discount">- R$ 0,00</b></p><p class="summary-total"><span>Total</span><strong>R$ 0,00</strong></p></div>
+          <div class="summary-security">✓ Compra protegida • Dados não armazenados</div>
+        </aside>
+      </div>
+      <footer class="checkout-nav"><button type="button" class="checkout-back">Voltar</button><button type="button" class="checkout-next">Continuar para pagamento</button></footer>
+
+      <div class="checkout-success" hidden><div class="success-icon">✓</div><span class="eyebrow">PEDIDO SIMULADO</span><h2>Compra finalizada com sucesso!</h2><p>Nenhuma cobrança foi realizada. Este checkout funciona apenas como demonstração.</p><div class="fake-order"><span>Número do pedido</span><strong></strong></div><button type="button" class="finish-demo">Voltar para a loja</button></div>
+    </section>
+  </div>
+
   <div class="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
